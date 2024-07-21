@@ -1,22 +1,27 @@
 import { Column } from "../Column";
+import { useState } from "react";
+import { statusList, cardList } from "../../data";
 
 export const Main = () => {
+  const [cards, setCards] = useState(cardList);
   return (
     <main className="main">
       <div className="container">
         <div className="main__block">
           <div className="main__content">
-            <Column title="Без статуса"/>
-            <Column title="Нужно сделать"/>
-            <Column title="В работе"/>
-            <Column title="Тестирование"/>
-            <Column title="Готово"/>
-
+           {statusList.map((status, i) => (
+              <Column
+              key = {i}
+              title={status}
+              cards={cards.filter((card) => card.status === status)}
+            />
+           ))}
+            
+           
+           
           </div>
         </div>
       </div>
     </main>
   );
 };
-
-
