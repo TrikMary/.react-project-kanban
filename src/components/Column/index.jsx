@@ -1,6 +1,6 @@
 import { Card } from "../Card";
 
-export const Column = ({title, name, cards }) => {
+export const Column = ({title, cards }) => {
   return (
     <div className="main__column column">
       <div className="column__title">
@@ -12,7 +12,6 @@ export const Column = ({title, name, cards }) => {
             <Card 
               key={card.id}
               title={card.title}
-              color={"_orange"}
               topic={card.topic}
               date={card.date}
               />
