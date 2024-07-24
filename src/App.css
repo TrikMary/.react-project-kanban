@@ -52,6 +52,11 @@
   box-sizing: border-box;
 }
 
+.loader {
+  text-align: center;
+  margin-top: 20px;
+}
+
 a,
 a:visited {
   text-decoration: none;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Header = () => {
+export const Header = ({addCard}) => {
   {/* Создаем состояние isOpen, которое отвечает открыто или нет окошко и */}
   {/* которое меняется с помощью функции */}
   {/* setIsOpen с первоначальным значение false */}
@@ -24,8 +24,8 @@ export const Header = () => {
             </a>
           </div>
           <nav className="header__nav">
-            <button className="header__btn-main-new _hover01" id="btnMainNew">
-              <a href="#popNewCard">Создать новую задачу</a>
+            <button onClick={addCard} className="header__btn-main-new _hover01" id="btnMainNew">
+              <a >Создать новую задачу</a>
             </button>
             {/* ---тут код для выскакивающего элемента пользователя, добавляем onClick, который вызывает функцию--- */}
             <a className="header__user _hover02" onClick={toggleOpenUser} >

@@ -2,8 +2,9 @@ import { Column } from "../Column";
 import { useState } from "react";
 import { statusList, cardList } from "../../data";
 
-export const Main = () => {
-  const [cards, setCards] = useState(cardList);
+
+export const Main = ({cards}) => {
+ 
   return (
     <main className="main">
       <div className="container">
@@ -24,4 +25,4 @@ export const Main = () => {
       </div>
     </main>
   );
-};
+}
