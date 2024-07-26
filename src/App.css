@@ -52,6 +52,11 @@
   box-sizing: border-box;
 }
 
+.loader {
+  text-align: center;
+  margin-top: 20px;
+}
+
 a,
 a:visited {
   text-decoration: none;
@@ -820,7 +825,7 @@ body {
   padding: 0;
 }
 .header__pop-user-set {
-  display: none;
+  display: block;
   position: absolute;
   top: 61px;
   right: 0;
