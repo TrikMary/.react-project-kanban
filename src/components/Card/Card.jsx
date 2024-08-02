@@ -1,4 +1,5 @@
 import { cardList } from "../../data"
+import * as S from "./card.styled"
 
 export const Card = ({title, topic, date}) => {
   const colors = {
@@ -7,12 +8,12 @@ export const Card = ({title, topic, date}) => {
     "Copywriting": "_purple"
   }
     return (
-        <div className="cards__item">
-          <div className="cards__card card">
-            <div className="card__group">
-              <div className={`card__theme ${colors[topic]}`}>
+        <S.CardItem>
+          <S.Card>
+            <S.CardGroup>
+              <S.CardTheme className={` ${colors[topic]}`}>
                 <p className={`card__name`}>{topic}</p>
-              </div>
+              </S.CardTheme>
               <a href="#popBrowse" target="_self">
                 <div className="card__btn">
                   <div />
@@ -20,7 +21,7 @@ export const Card = ({title, topic, date}) => {
                   <div />
                 </div>
               </a>
-            </div>
+            </S.CardGroup>
             <div className="card__content">
               <a href="" target="_blank">
                 <h3 className="card__title">{title}</h3>
@@ -57,7 +58,7 @@ export const Card = ({title, topic, date}) => {
                 <p>{date}</p>
               </div>
             </div>
-          </div>
-        </div>
+          </S.Card>
+        </S.CardItem>
     )
 }

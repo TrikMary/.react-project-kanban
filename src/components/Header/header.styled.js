@@ -63,3 +63,7 @@ color: #565EEF;
 
 ${Hover02}
 `
+
+export const ButtonExit = styled.button`
+
+`
