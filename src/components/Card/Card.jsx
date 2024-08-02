@@ -15,18 +15,18 @@ export const Card = ({title, topic, date}) => {
                 <p className={`card__name`}>{topic}</p>
               </S.CardTheme>
               <a href="#popBrowse" target="_self">
-                <div className="card__btn">
+                <S.CardButton>
                   <div />
                   <div />
                   <div />
-                </div>
+                </S.CardButton>
               </a>
             </S.CardGroup>
-            <div className="card__content">
+            <S.CardContent>
               <a href="" target="_blank">
-                <h3 className="card__title">{title}</h3>
+                <S.CardTitleH3>{title}</S.CardTitleH3>
               </a>
-              <div className="card__date">
+              <S.CardDate>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={13}
@@ -56,8 +56,8 @@ export const Card = ({title, topic, date}) => {
                   </defs>
                 </svg>
                 <p>{date}</p>
-              </div>
-            </div>
+              </S.CardDate>
+            </S.CardContent>
           </S.Card>
         </S.CardItem>
     )

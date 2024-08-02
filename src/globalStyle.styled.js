@@ -51,6 +51,14 @@ width: 100%;
 margin: 0 auto;
 padding: 0 30px;
 `
+export const Cards = css`
+.cards {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+`
+
 export const Orange = css`
 background-color: #FFE4C2;
 color: #FF6D00;
