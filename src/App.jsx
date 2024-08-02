@@ -1,9 +1,9 @@
 import "./App.css";
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
-import { PopBrowse } from "./components/PopBrowse";
-import { PopUser } from "./components/PopUser";
-import { PopNewCard } from "./components/PopNewCard";
+import { Header } from "./components/Header/Header.jsx";
+import { Main } from "./components/Main/Main.jsx";
+import { PopBrowse } from "./components/PopBrowse/PopBrowse.jsx";
+import { PopUser } from "./components/PopUser/PopUser.jsx";
+import { PopNewCard } from "./components/PopNewCard/PopNewCard.jsx";
 import { useEffect, useState } from "react";
 import { cardList } from "./data";
 import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";

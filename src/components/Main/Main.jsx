@@ -1,4 +1,4 @@
-import { Column } from "../Column";
+import { Column } from "../Column/Column";
 import { useState } from "react";
 import { statusList, cardList } from "../../data";
 
