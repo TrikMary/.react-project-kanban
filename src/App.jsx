@@ -6,6 +6,7 @@ import { PopUser } from "./components/PopUser";
 import { PopNewCard } from "./components/PopNewCard";
 import { useEffect, useState } from "react";
 import { cardList } from "./data";
+import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
 
 function App() {
   {
@@ -38,7 +39,8 @@ function App() {
 
   return (
     <>
-      <div className="wrapper">
+      <GlobalStyle />
+      <Wrapper>
         <PopUser />
         <PopNewCard />
         <PopBrowse />
@@ -48,7 +50,7 @@ function App() {
         ) : (
           <Main cards={cards} />
         )}
-      </div>
+      </Wrapper>
     </>
   );
 }
