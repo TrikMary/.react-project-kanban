@@ -8,7 +8,6 @@ export const PopUser = () => {
           <S.PopExitTitle>
             <h2>Выйти из аккаунта?</h2>
           </S.PopExitTitle>
-          {/* TODO Можно ли создавать стилизованный компонент, но без стилей? */}
           <S.PopExitForm id="formExit" action="#">
             <S.PopExitFormGroup>
               <S.ButtonPopExitYes id="exitYes">
