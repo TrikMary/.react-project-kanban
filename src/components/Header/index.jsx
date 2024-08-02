@@ -1,4 +1,7 @@
 import { useState } from "react";
+import * as S from "./header.styled.js"
+import { Container } from "../../globalStyle.styled.js";
+
 
 export const Header = ({ addCard }) => {
   {
@@ -18,9 +21,9 @@ export const Header = ({ addCard }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="header">
-      <div className="container">
-        <div className="header__block">
+    <S.Header>
+      <Container>
+        <S.HeaderBlock>
           <div className="header__logo _show _light">
             <a href="" target="_self">
               <img src="images/logo.png" alt="logo" />
@@ -32,17 +35,16 @@ export const Header = ({ addCard }) => {
             </a>
           </div>
           <nav className="header__nav">
-            <button
+            <S.HeaderBtnNew
               onClick={addCard}
-              className="header__btn-main-new _hover01"
-              id="btnMainNew"
+              // id="btnMainNew"
             >
               <a>Создать новую задачу</a>
-            </button>
+            </S.HeaderBtnNew>
             {/* ---тут код для выскакивающего элемента пользователя, добавляем onClick, который вызывает функцию--- */}
-            <a className="header__user _hover02" onClick={toggleOpenUser}>
+            <S.HeaderUser onClick={toggleOpenUser}>
               Ivan Ivanov
-            </a>
+            </S.HeaderUser>
             {/*Пишем логику для отрисовки модального окошка, если первое условие выполнено, то сработает второе*/}
             {isOpen && (
               <div
@@ -61,8 +63,8 @@ export const Header = ({ addCard }) => {
               </div>
             )}
           </nav>
-        </div>
-      </div>
-    </header>
+        </S.HeaderBlock>
+      </Container>
+    </S.Header>
   );
 };
