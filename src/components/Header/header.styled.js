@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Hover01, Hover02 } from "../../globalStyle.styled.js";
 
 export const Header = styled.header`
@@ -17,6 +17,20 @@ position: relative;
 top: 0;
 left: 0;
 padding: 0 10px;
+`
+
+export const HeaderLogo = styled.div`
+img {
+  width: 85px;
+}
+`
+
+export const HeaderNav = styled.div`
+max-width: 290px;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
 `
 
 export const HeaderBtnNew = styled.button`

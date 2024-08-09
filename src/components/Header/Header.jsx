@@ -24,17 +24,17 @@ export const Header = ({ addCard }) => {
     <S.Header>
       <Container>
         <S.HeaderBlock>
-          <div className="header__logo _show _light">
+          <S.HeaderLogo className="_show _light">
             <a href="" target="_self">
               <img src="images/logo.png" alt="logo" />
             </a>
-          </div>
-          <div className="header__logo _dark">
+          </S.HeaderLogo >
+          <S.HeaderLogo className="_dark">
             <a href="" target="_self">
               <img src="images/logo_dark.png" alt="logo" />
             </a>
-          </div>
-          <nav className="header__nav">
+          </S.HeaderLogo >
+          <S.HeaderNav>
             <S.HeaderBtnNew
               onClick={addCard}
               // id="btnMainNew"
@@ -62,7 +62,7 @@ export const Header = ({ addCard }) => {
                 </button>
               </div>
             )}
-          </nav>
+          </S.HeaderNav>
         </S.HeaderBlock>
       </Container>
     </S.Header>
