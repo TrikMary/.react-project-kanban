@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { cardList } from "./data";
 import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
 import { ThemeProvider } from "styled-components";
-import { dark, light } from "./theme.jsx";
+import { dark, light } from "./theme.js";
 
 function App() {
   {

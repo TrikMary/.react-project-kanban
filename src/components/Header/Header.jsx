@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./header.styled.js"
 import { Container } from "../../globalStyle.styled.js";
-import { dark } from "../../theme.jsx";
+
 
 
 export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
