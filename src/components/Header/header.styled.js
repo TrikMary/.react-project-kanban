@@ -4,7 +4,7 @@ import { Hover01, Hover02 } from "../../globalStyle.styled.js";
 export const Header = styled.header`
   width: 100%;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: ${({theme}) => theme.headerBG};
 `
 
 export const HeaderBlock = styled.div`
@@ -24,6 +24,7 @@ img {
   width: 85px;
 }
 `
+
 
 export const HeaderNav = styled.div`
 max-width: 290px;

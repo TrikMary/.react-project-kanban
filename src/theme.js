@@ -1,4 +1,5 @@
 export const light = {
+    headerBG: "#FFFFFF",
     bodyBG: "EAEEF6",
     text: "",
     orangeText: "#FF6D00",
@@ -10,9 +11,12 @@ export const light = {
     greyText: "#FFFFFF",
     greyBg: "#94A6BE",
     cardBodyColor: "#FFFFFF",
+    cardTitleColor: "#000000",
+    
 }
 
 export const dark = {
+    headerBG: "#20202C",
     bodyBG: "#151419",
     text: "",
     orangeText: "#FFE4C2",
@@ -23,5 +27,7 @@ export const dark = {
     purpleBg: "#9A48F1",
     greyText: "#94A6BE",
     greyBg: "FFFFFF",
-    cardBodyColor: "#20202C"
+    cardBodyColor: "#20202C",
+    cardTitleColor: "#FFFFFF",
+    
 }

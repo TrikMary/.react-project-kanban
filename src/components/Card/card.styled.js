@@ -69,7 +69,7 @@ export const CardTitleH3 = styled.h3`
 font-size: 14px;
 font-weight: 500;
 line-height: 18px;
-color: #000000;
+color: ${({theme}) => theme.cardTitleColor};
 margin-bottom: 10px;
 `
 

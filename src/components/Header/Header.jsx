@@ -26,12 +26,13 @@ export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
     setChangeTheme(changeTheme === "light" ? "dark" : "light")
   }
 
-
-
+ 
   return (
     <S.Header>
       <Container>
         <S.HeaderBlock>
+          
+        
           <S.HeaderLogo className="_show _light">
             <a href="" target="_self">
               <img src="images/logo.png" alt="logo" />
@@ -42,6 +43,7 @@ export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
               <img src="images/logo_dark.png" alt="logo" />
             </a>
           </S.HeaderLogo >
+
           <S.HeaderNav>
             <S.HeaderBtnNew
               onClick={addCard}
@@ -63,7 +65,9 @@ export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
                 <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
                 <div className="pop-user-set__theme">
                   <p>Темная тема</p>
-                  <input checked={changeTheme === "dark"} onClick={onChangeTheme} type="checkbox" className="checkbox" name="checkbox" />
+                  <input checked={changeTheme === "dark"} 
+                  onChange={onChangeTheme} type="checkbox" 
+                  className="checkbox" name="checkbox" />
                 </div>
                 <button type="button" className="_hover03">
                   <a href="#popExit">Выйти</a>
