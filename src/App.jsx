@@ -7,6 +7,8 @@ import { PopNewCard } from "./components/PopNewCard/PopNewCard.jsx";
 import { useEffect, useState } from "react";
 import { cardList } from "./data";
 import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
+import { ThemeProvider } from "styled-components";
+import { dark, light } from "./theme.jsx";
 
 function App() {
   {
@@ -37,21 +39,24 @@ function App() {
     }, 1000);
   }, []);
 
+  {/* Создаем состояние, которое будет отвечать за смену темы */}
+  const [changeTheme, setChangeTheme] = useState("light")
+
   return (
-    <>
+    <ThemeProvider theme={changeTheme === "light" ? light : dark}>
       <GlobalStyle />
       <Wrapper>
         <PopUser />
         <PopNewCard />
         <PopBrowse />
-        <Header addCard={addCard} />
+        <Header addCard={addCard} setChangeTheme={setChangeTheme} changeTheme={changeTheme}/>
         {isLoading ? (
           <p className="loader">Данные загружаются</p>
         ) : (
           <Main cards={cards} />
         )}
       </Wrapper>
-    </>
+    </ThemeProvider>
   );
 }
 

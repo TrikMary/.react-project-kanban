@@ -1,9 +1,10 @@
 import { useState } from "react";
 import * as S from "./header.styled.js"
 import { Container } from "../../globalStyle.styled.js";
+import { dark } from "../../theme.jsx";
 
 
-export const Header = ({ addCard }) => {
+export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
   {
     /* Создаем состояние isOpen, которое отвечает открыто или нет окошко и */
   }
@@ -20,6 +21,13 @@ export const Header = ({ addCard }) => {
   const toggleOpenUser = () => {
     setIsOpen(!isOpen);
   };
+
+  const onChangeTheme = () => {
+    setChangeTheme(changeTheme === "light" ? "dark" : "light")
+  }
+
+
+
   return (
     <S.Header>
       <Container>
@@ -55,7 +63,7 @@ export const Header = ({ addCard }) => {
                 <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
                 <div className="pop-user-set__theme">
                   <p>Темная тема</p>
-                  <input type="checkbox" className="checkbox" name="checkbox" />
+                  <input checked={changeTheme === "dark"} onClick={onChangeTheme} type="checkbox" className="checkbox" name="checkbox" />
                 </div>
                 <button type="button" className="_hover03">
                   <a href="#popExit">Выйти</a>
