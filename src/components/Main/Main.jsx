@@ -1,7 +1,7 @@
 import { Column } from "../Column/Column";
 import { useState } from "react";
 import { statusList, cardList } from "../../data";
-import * as S from "./mail.styled.js"
+import * as S from "./main.styled.js"
 import { Container } from "../../globalStyle.styled";
 
 

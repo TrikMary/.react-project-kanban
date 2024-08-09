@@ -5,7 +5,7 @@ import { PopBrowse } from "./components/PopBrowse/PopBrowse.jsx";
 import { PopUser } from "./components/PopUser/PopUser.jsx";
 import { PopNewCard } from "./components/PopNewCard/PopNewCard.jsx";
 import { useEffect, useState } from "react";
-import { cardList } from "./data";
+import { cardList } from "./data.js";
 import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
 import { ThemeProvider } from "styled-components";
 import { dark, light } from "./theme.js";

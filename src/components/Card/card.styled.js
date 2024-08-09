@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import { Cards } from "../../globalStyle.styled";
+import { Cards, themeColor } from "../../globalStyle.styled";
 
 const cardAnimation = keyframes`
 0% {
@@ -24,7 +24,7 @@ animation-timing-function: linear;
 export const Card = styled.div`
 width: 220px;
 height: 130px;
-background-color: #FFFFFF;
+background-color: ${({theme}) => theme.cardBodyColor};
 border-radius: 10px;
 display: flex;
 flex-direction: column;
@@ -48,6 +48,8 @@ width: auto;
 height: 20px;
 padding: 5px 14px;
 border-radius: 18px;
+
+${({$color}) => themeColor($color)}
 
 p {
   font-size: 10px;

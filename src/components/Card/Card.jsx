@@ -2,17 +2,17 @@ import { cardList } from "../../data"
 import * as S from "./card.styled"
 
 export const Card = ({title, topic, date}) => {
-  const colors = {
-    "Web Design": "_orange",
-    "Research": "_green",
-    "Copywriting": "_purple"
-  }
+  // const colors = {
+  //   "Web Design": "_orange",
+  //   "Research": "_green",
+  //   "Copywriting": "_purple"
+  // }
     return (
         <S.CardItem>
           <S.Card>
             <S.CardGroup>
-              <S.CardTheme className={` ${colors[topic]}`}>
-                <p className={`card__name`}>{topic}</p>
+              <S.CardTheme $color={topic}>
+                <p>{topic}</p>
               </S.CardTheme>
               <a href="#popBrowse" target="_self">
                 <S.CardButton>
