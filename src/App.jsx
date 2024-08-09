@@ -16,11 +16,11 @@ function App() {
   }
   const [cards, setCards] = useState(cardList);
   {
-    /* Создаем функцию по добавлению новой задачи */
+    /* Создаем функцию по добавлению новой задачи, вместо id берем длинну cards из состояния */
   }
   const addCard = () => {
     const newCard = {
-      id: cardList.length + 1,
+      id: cards.length + 1,
       topic: "Web Design",
       title: "Название new задачи",
       date: "30.10.23",
