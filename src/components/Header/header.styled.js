@@ -22,6 +22,7 @@ padding: 0 10px;
 export const HeaderLogo = styled.div`
 img {
   width: 85px;
+  
 }
 `
 
@@ -153,8 +154,11 @@ outline: none;
   border-radius: 50%;
   background-color: #94A6BE;
   transition: 0.5s;
-  } 
-}       
+} 
+&:checked[type=checkbox]::before {
+  left: 12px;
+}
+
 `
 
 export const PopUserButtonExit = styled.button`

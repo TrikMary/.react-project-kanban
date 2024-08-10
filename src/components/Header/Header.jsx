@@ -35,7 +35,7 @@ export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
         
           <S.HeaderLogo className="_show _light">
             <a href="" target="_self">
-              <img src="images/logo.png" alt="logo" />
+              <img src = "${({theme}) => theme.logoSrc}" alt="logo" />
             </a>
           </S.HeaderLogo >
           <S.HeaderLogo className="_dark">
