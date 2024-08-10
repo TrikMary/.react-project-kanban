@@ -1,7 +1,10 @@
 export const light = {
     headerBG: "#FFFFFF",
+    headerUserText: "#565EEF",
+    headerPopUserThemeBg: "#FFF",
     bodyBG: "EAEEF6",
-    text: "",
+    headerpopUserThemeText: "#000",
+    headerButtonThemeExitText: "#565EEF",
     orangeText: "#FF6D00",
     orangeBg: "#FFE4C2",
     greenText: "#06B16E",
@@ -17,8 +20,12 @@ export const light = {
 
 export const dark = {
     headerBG: "#20202C",
+    headerUserText: "#FFFFFF",
     bodyBG: "#151419",
-    text: "",
+    headerButtonThemeExitText: "#FFFFFF",
+    headerPopUserThemeBg: "#202229",
+    headerPopUserThemeText: "#FFFFFF",
+    headerButtonThemeExitText: "#FFFFFF",
     orangeText: "#FFE4C2",
     orangeBg: "#FF6D00",
     greenText: "#B4FDD1",

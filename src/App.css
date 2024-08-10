@@ -84,7 +84,7 @@ body {
   color: #FFFFFF;
 } */
 
-.pop-user-set:target,
+/* .pop-user-set:target, */
 .pop-exit:target,
 .pop-new-card:target,
 .pop-browse:target {
@@ -218,22 +218,22 @@ body {
   justify-content: space-between;
 } */
 
-.pop-user-set__name {
+/* .pop-user-set__name {
   color: #000;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   letter-spacing: -0.14px;
   margin-bottom: 4px;
-}
-.pop-user-set__mail {
+} */
+/* .pop-user-set__mail {
   color: #94A6BE;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: -0.14px;
   margin-bottom: 10px;
-}
-.pop-user-set__theme {
+} */
+/* .pop-user-set__theme {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -269,18 +269,18 @@ body {
 }
 .pop-user-set__theme input:checked[type=checkbox]::before {
   left: 12px;
-}
-.pop-user-set button {
+} */
+/* .pop-user-set button {
   width: 72px;
   height: 30px;
   background: transparent;
   color: #565EEF;
   border-radius: 4px;
   border: 1px solid #565EEF;
-}
-.pop-user-set button a {
+} */
+/* .pop-user-set button a {
   color: #565EEF;
-}
+} */
 
 .pop-new-card {
   display: none;
@@ -783,7 +783,7 @@ body {
   margin: -6px 0 0 5px;
   padding: 0;
 } */
-.header__pop-user-set {
+/* .header__pop-user-set {
   display: block;
   position: absolute;
   top: 61px;
@@ -797,7 +797,7 @@ body {
   padding: 34px;
   text-align: center;
   z-index: 2;
-}
+} */
 
 /* .main {
   width: 100%;
