@@ -1,3 +1,4 @@
+
 export const light = {
     
     headerBG: "#FFFFFF",
@@ -16,11 +17,12 @@ export const light = {
     greyBg: "#94A6BE",
     cardBodyColor: "#FFFFFF",
     cardTitleColor: "#000000",
-    logoSrc: "images/logo.png",
+    
+    
 }
 
 export const dark = {
-    logoSrc: "../public/images/logo.png",
+    
     headerBG: "#20202C",
     headerUserText: "#FFFFFF",
     bodyBG: "#151419",
@@ -38,5 +40,6 @@ export const dark = {
     greyBg: "FFFFFF",
     cardBodyColor: "#20202C",
     cardTitleColor: "#FFFFFF",
+    
     
 }

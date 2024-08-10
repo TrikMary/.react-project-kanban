@@ -26,23 +26,25 @@ export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
     setChangeTheme(changeTheme === "light" ? "dark" : "light")
   }
 
- 
+  
+
+  
   return (
     <S.Header>
       <Container>
         <S.HeaderBlock>
-          
-        
-          <S.HeaderLogo className="_show _light">
-            <a href="" target="_self">
-              <img src = "${({theme}) => theme.logoSrc}" alt="logo" />
+
+          <S.HeaderLogoLight >
+            <a href="" target="">
+              <img src="images/logo.png" alt="logo" />
             </a>
-          </S.HeaderLogo >
-          <S.HeaderLogo className="_dark">
+          </S.HeaderLogoLight>
+
+          <S.HeaderLogoDark >
             <a href="" target="_self">
               <img src="images/logo_dark.png" alt="logo" />
             </a>
-          </S.HeaderLogo >
+          </S.HeaderLogoDark >
 
           <S.HeaderNav>
             <S.HeaderBtnNew
@@ -64,11 +66,11 @@ export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
                 <S.PopUserSetMail>ivan.ivanov@gmail.com</S.PopUserSetMail>
                 <S.PopUserSetTheme>
                   <p>Темная тема</p>
-                  <S.ThemeCheckboxImput checked={changeTheme === "dark"} 
-                  onChange={onChangeTheme} type="checkbox" 
+                  <S.ThemeCheckboxImput defaultChecked={changeTheme === "dark"} 
+                  onClick={onChangeTheme} type="checkbox" 
                    name="checkbox" />
                 </S.PopUserSetTheme>
-                <S.PopUserButtonExit type="button" className="_hover03">
+                <S.PopUserButtonExit type="button">
                   <a href="#popExit">Выйти</a>
                 </S.PopUserButtonExit>
               </S.HeaderPopUserSet>

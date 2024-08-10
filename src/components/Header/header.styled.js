@@ -18,14 +18,27 @@ top: 0;
 left: 0;
 padding: 0 10px;
 `
-
+{/*Логотип, изначально есть оба, если light то ставим none на dark и наоборот*/}
 export const HeaderLogo = styled.div`
+
 img {
-  width: 85px;
-  
+  width: 85px; 
 }
 `
 
+export const HeaderLogoLight = styled.div`
+
+img {
+  width: 85px; 
+}
+`
+
+export const HeaderLogoDark = styled.div`
+img {
+  width: 85px; 
+}
+` 
+{/*-----*/}
 
 export const HeaderNav = styled.div`
 max-width: 290px;
