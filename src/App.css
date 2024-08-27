@@ -919,7 +919,9 @@ body {
   letter-spacing: 0.2px;
 } */
 
-@media screen and (max-width: 1200px) {
+/* стили для адаптивного дизайна */
+
+/* @media screen and (max-width: 1200px) {
   .main__block {
     width: 100%;
     margin: 0 auto;
@@ -1096,4 +1098,4 @@ body {
   .pop-exit__form-group {
     display: block;
   }
-}
+} */
