@@ -1,6 +1,10 @@
 import { useState } from "react";
+import * as S from "./header.styled.js"
+import { Container } from "../../globalStyle.styled.js";
 
-export const Header = ({ addCard }) => {
+
+
+export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
   {
     /* Создаем состояние isOpen, которое отвечает открыто или нет окошко и */
   }
@@ -17,52 +21,63 @@ export const Header = ({ addCard }) => {
   const toggleOpenUser = () => {
     setIsOpen(!isOpen);
   };
+
+  const onChangeTheme = () => {
+    setChangeTheme(changeTheme === "light" ? "dark" : "light")
+  }
+
+  
+
+  
   return (
-    <header className="header">
-      <div className="container">
-        <div className="header__block">
-          <div className="header__logo _show _light">
-            <a href="" target="_self">
+    <S.Header>
+      <Container>
+        <S.HeaderBlock>
+
+          <S.HeaderLogoLight >
+            <a href="" target="">
               <img src="images/logo.png" alt="logo" />
             </a>
-          </div>
-          <div className="header__logo _dark">
+          </S.HeaderLogoLight>
+
+          <S.HeaderLogoDark >
             <a href="" target="_self">
               <img src="images/logo_dark.png" alt="logo" />
             </a>
-          </div>
-          <nav className="header__nav">
-            <button
+          </S.HeaderLogoDark >
+
+          <S.HeaderNav>
+            <S.HeaderBtnNew
               onClick={addCard}
-              className="header__btn-main-new _hover01"
-              id="btnMainNew"
+              // id="btnMainNew"
             >
               <a>Создать новую задачу</a>
-            </button>
+            </S.HeaderBtnNew>
             {/* ---тут код для выскакивающего элемента пользователя, добавляем onClick, который вызывает функцию--- */}
-            <a className="header__user _hover02" onClick={toggleOpenUser}>
+            <S.HeaderUser onClick={toggleOpenUser}>
               Ivan Ivanov
-            </a>
+            </S.HeaderUser>
             {/*Пишем логику для отрисовки модального окошка, если первое условие выполнено, то сработает второе*/}
             {isOpen && (
-              <div
-                className="header__pop-user-set pop-user-set"
+              <S.HeaderPopUserSet
                 id="user-set-target"
               >
-                <p className="pop-user-set__name">Ivan Ivanov</p>
-                <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
-                <div className="pop-user-set__theme">
+                <S.PopUserSetName>Ivan Ivanov</S.PopUserSetName>
+                <S.PopUserSetMail>ivan.ivanov@gmail.com</S.PopUserSetMail>
+                <S.PopUserSetTheme>
                   <p>Темная тема</p>
-                  <input type="checkbox" className="checkbox" name="checkbox" />
-                </div>
-                <button type="button" className="_hover03">
+                  <S.ThemeCheckboxImput defaultChecked={changeTheme === "dark"} 
+                  onClick={onChangeTheme} type="checkbox" 
+                   name="checkbox" />
+                </S.PopUserSetTheme>
+                <S.PopUserButtonExit type="button">
                   <a href="#popExit">Выйти</a>
-                </button>
-              </div>
+                </S.PopUserButtonExit>
+              </S.HeaderPopUserSet>
             )}
-          </nav>
-        </div>
-      </div>
-    </header>
+          </S.HeaderNav>
+        </S.HeaderBlock>
+      </Container>
+    </S.Header>
   );
 };
