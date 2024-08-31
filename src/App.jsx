@@ -9,35 +9,10 @@ import { cardList } from "./data.js";
 import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
 import { ThemeProvider } from "styled-components";
 import { dark, light } from "./theme.js";
+import { AppRoutes } from "./router/AppRoutes.jsx";
 
 function App() {
-  {
-    /* Создаем состояние, которое можем изменять */
-  }
-  const [cards, setCards] = useState(cardList);
-  {
-    /* Создаем функцию по добавлению новой задачи, вместо id берем длинну cards из состояния */
-  }
-  const addCard = () => {
-    const newCard = {
-      id: cards.length + 1,
-      topic: "Web Design",
-      title: "Название new задачи",
-      date: "30.10.23",
-      status: "Без статуса",
-    };
-    { /* С помощью spread оператора раскладываем массив 
-    на обьекты и добавляем к нему еще один обьект и опять упаковываем в массив */ }
-    setCards([...cards, newCard])
-  };
-  {/* Создаем имитацию загрузки и отрисовываем выбор ниже в return */}
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
+ 
 
   {/* Создаем состояние, которое будет отвечать за смену темы */}
   const [changeTheme, setChangeTheme] = useState("light")
@@ -45,17 +20,10 @@ function App() {
   return (
     <ThemeProvider theme={changeTheme === "light" ? light : dark}>
       <GlobalStyle />
-      <Wrapper>
-        <PopUser />
-        <PopNewCard />
-        <PopBrowse />
-        <Header addCard={addCard} setChangeTheme={setChangeTheme} changeTheme={changeTheme}/>
-        {isLoading ? (
-          <p className="loader">Данные загружаются</p>
-        ) : (
-          <Main cards={cards} />
-        )}
-      </Wrapper>
+
+      {/* Вставляем компонент с страницами */}
+      <AppRoutes changeTheme={changeTheme} setChangeTheme={setChangeTheme} />
+     
     </ThemeProvider>
   );
 }
