@@ -17,7 +17,11 @@ export const light = {
     greyBg: "#94A6BE",
     cardBodyColor: "#FFFFFF",
     cardTitleColor: "#000000",
-    
+    // loginPage
+    wrapperSignInBG: "#EAEEF6",
+    modalBlockSignInBG: "#FFFFFF",
+    modalBlockSignInBorder: "#D4DBE5",
+
     
 }
 
@@ -40,6 +44,8 @@ export const dark = {
     greyBg: "FFFFFF",
     cardBodyColor: "#20202C",
     cardTitleColor: "#FFFFFF",
-    
-    
+    // loginPage
+    wrapperSignInBG: "#151419",
+    modalBlockSignInBG: "#20202C",
+    modalBlockSignInBorder: "#4E5566",
 }
