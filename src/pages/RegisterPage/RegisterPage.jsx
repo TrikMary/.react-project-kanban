@@ -1,4 +1,15 @@
-export const RegisterPage = () => {
+import { Link } from "react-router-dom"
+import { routes } from "../../router/routes.js"
+
+
+
+export const RegisterPage = ({ setIsAuth }) => {
+// Функция имитирующая регистрацию
+  const registerTrue = () => {
+    
+    setIsAuth(true)
+        
+  }
     return (
         <div className="wrapper">
   <div className="container-signup">
@@ -30,11 +41,11 @@ export const RegisterPage = () => {
             placeholder="Пароль"
           />
           <button className="modal__btn-signup-ent _hover01" id="SignUpEnter">
-            <a href="../main.html">Зарегистрироваться</a>{" "}
+            <Link onClick={registerTrue} to={routes.main }>Зарегистрироваться</Link>{" "}
           </button>
           <div className="modal__form-group">
             <p>
-              Уже есть аккаунт? <a href="signin.html">Войдите здесь</a>
+              Уже есть аккаунт? <Link to={routes.login}>Войдите здесь</Link>
             </p>
           </div>
         </form>

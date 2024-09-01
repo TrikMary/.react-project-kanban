@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { cardList } from "../../data";
 import { Wrapper } from "../../globalStyle.styled.js";
-import { PopUser } from "../../components/PopUser/PopUser.jsx";
+import { PopExit } from "../../components/PopExit/PopExit.jsx";
 import { PopNewCard } from "../../components/PopNewCard/PopNewCard";
 import { PopBrowse } from "../../components/PopBrowse/PopBrowse.jsx";
 import { Header } from "../../components/Header/Header.jsx";
 import { Main } from "../../components/Main/Main.jsx";
+import { Outlet } from "react-router-dom";
 
 export const MainPage = ({ changeTheme, setChangeTheme }) => {
     {
@@ -38,9 +39,10 @@ export const MainPage = ({ changeTheme, setChangeTheme }) => {
     return (
         
         <Wrapper>
-        <PopUser />
+        {/* <PopExit /> */}
+        <Outlet />
         <PopNewCard />
-        <PopBrowse />
+        {/* <PopBrowse /> */}
         <Header addCard={addCard} setChangeTheme={setChangeTheme} changeTheme={changeTheme}/>
         {isLoading ? (
           <p className="loader">Данные загружаются</p>

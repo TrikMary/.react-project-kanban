@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Hover01, Hover03 } from "../../globalStyle.styled.js";
 
 export const PopExit = styled.div`
-display: none;
+
 width: 100%;
 height: 100%;
 min-width: 320px;

@@ -1,4 +1,15 @@
-export const LoginPage = () => {
+import { useNavigate, Link } from "react-router-dom";
+import { routes } from "../../router/routes.js";
+
+export const LoginPage = ({ setIsAuth }) => {
+  
+  const navigate = useNavigate ()
+  const handleLogin = () => {
+    
+    setIsAuth(true)
+    
+    navigate(routes.main)
+  }
   return (
     <div className="wrapper">
       <div className="container-signin">
@@ -22,12 +33,12 @@ export const LoginPage = () => {
                 id="formpassword"
                 placeholder="Пароль"
               />
-              <button className="modal__btn-enter _hover01" id="btnEnter">
-                <a href="../main.html">Войти</a>
+              <button className="modal__btn-enter _hover01" id="btnEnter" onClick={handleLogin}>
+                Войти
               </button>
               <div className="modal__form-group">
                 <p>Нужно зарегистрироваться?</p>
-                <a href="signup.html">Регистрируйтесь здесь</a>
+                <Link to={routes.register}>Регистрируйтесь здесь</Link>
               </div>
             </form>
           </div>
