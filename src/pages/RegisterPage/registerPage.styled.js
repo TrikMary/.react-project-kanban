@@ -1,20 +1,22 @@
-import styled, {createGlobalStyle, css} from "styled-components";
-import { GlobalStyle, Hover01 } from "../../globalStyle.styled.js";
+import styled from "styled-components";
+import { Hover01 } from "../../globalStyle.styled";
 
-    
-export const LoginPageGlobalStyle = styled.div`
+export const RegPageGlobalStyle = styled.div`
   font-family: "Roboto", sans-serif
 
-`;
-export const WrapperSignIn = styled.div`
+`
+
+
+export const WrapperReg = styled.div`
 width: 100%;
 height: 100%;
 overflow-x: hidden;
 overflow-y: scroll;
 background-color: ${({theme}) => theme.wrapperSignInBG};
-`;
 
-export const ContainerSignIn = styled.div`
+`
+
+export const ContainerSignup = styled.div`
 display: block;
 width: 100vw;
 min-height: 100vh;
@@ -30,19 +32,21 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-`;
+
+`
 
 export const ModalBlock = styled.div`
 display: block;
 margin: 0 auto;
-background-color: ${({theme}) => theme.modalBlockSignInBG};
+background-color: ${({theme}) => theme.modalBlockSignInBG};;
 max-width: 368px;
 width: 100%;
 padding: 50px 60px;
 border-radius: 10px;
 border: 0.7px solid ${({theme}) => theme.modalBlockSignInBGodalBlockSignInBorder};
 box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.13);
-`;
+`
+
 export const ModalTtl = styled.div`
 h2 {
     text-align: center;
@@ -54,18 +58,20 @@ h2 {
     font-family: "Roboto", sans-serif;
     color: ${({theme}) => theme.modalTtlSighIn};
   }
-`;
-export const ModalFormLogin = styled.form`
+`
+
+export const ModalFormReg = styled.form`
 width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 
-input:first-child {
+input:not(:last-child) {
     margin-bottom: 7px;
-  }
-`;
+}
+`
+
 export const ModalInput = styled.input`
 width: 100%;
 min-width: 100%;
@@ -83,17 +89,20 @@ background-color: ${({theme}) => theme.modalInputBG};
     line-height: 21px;
     letter-spacing: -0.28px;
     color: #94A6BE;
-}
+  }
+
 &::placeholder {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.28px;
-    color: #94A6BE; 
-}   
-`;
-export const ModalBtnEnter = styled.button`
+    color: #94A6BE;
+  }
+
+`
+
+export const ModalBtnSignupEnt = styled.button`
 width: 100%;
 height: 30px;
 background-color: #565EEF;
@@ -110,8 +119,9 @@ line-height: 21px;
 font-weight: 500;
 letter-spacing: -0.14px;
 color: #FFFFFF;
+font-family: "Roboto", sans-serif;
 
-${Hover01}
+${Hover01};
 
 a {
     width: 100%;
@@ -122,22 +132,21 @@ a {
     justify-content: center;
     
   }
-
-`;
+`
 
 export const ModalFormGroup = styled.div`
 text-align: center;
 
 p,
 a {
-    color: rgba(148, 166, 190, 0.4);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: -0.14px;
+  color: rgba(148, 166, 190, 0.4);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.14px;
 }
 
 a {
     text-decoration: underline;
   }
-`;
+`
