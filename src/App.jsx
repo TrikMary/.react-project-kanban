@@ -16,7 +16,7 @@ function App() {
 
   {/* Создаем состояние, которое будет отвечать за смену темы
    ДЛЯ ПРОВЕРКИ ЛОГИНА И РЕГИСТРАЦИИ МЕНЯЮ ТЕМУ ТУТ */}
-  const [changeTheme, setChangeTheme] = useState("dark")
+  const [changeTheme, setChangeTheme] = useState("light")
 
   return (
     <ThemeProvider theme={changeTheme === "light" ? light : dark}>

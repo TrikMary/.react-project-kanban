@@ -23,6 +23,11 @@ export const light = {
     modalBlockSignInBorder: "#D4DBE5",
     modalTtlSighIn: "#000000",
     modalInputBG: "#FFFFFF",
+    //ExitPage
+    exitBG: "rgba(0, 0, 0, 0.4)",
+    exitBlockBG: "#FFFFFF",
+    exitBG: "#EAEEF6",
+    exitNo: "#565EEF"
 
     
 }
@@ -52,4 +57,9 @@ export const dark = {
     modalBlockSignInBorder: "#4E5566",
     modalTtlSighIn: "#FFFFFF",
     modalInputBG: "#20202C",
+    //ExitPage
+    exitBG: "rgba(0, 0, 0, 0.8)",
+    exitBlockBG: "#20202C",
+    exitBG: "#151419",
+    exitNo: "#FFFFFF",
 }   

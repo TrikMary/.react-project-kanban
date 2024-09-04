@@ -40,7 +40,7 @@ max-width: 368px;
 width: 100%;
 padding: 50px 60px;
 border-radius: 10px;
-border: 0.7px solid ${({theme}) => theme.modalBlockSignInBGodalBlockSignInBorder};
+border: 0.7px solid ${({theme}) => theme.modalBlockSignInBorder};
 box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.13);
 `;
 export const ModalTtl = styled.div`
