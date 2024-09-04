@@ -1,8 +1,11 @@
-import styled, {css} from "styled-components";
-import { Hover01 } from "../../globalStyle.styled.js";
+import styled, {createGlobalStyle, css} from "styled-components";
+import { GlobalStyle, Hover01 } from "../../globalStyle.styled.js";
 
     
+export const LoginPageGlobalStyle = styled.div`
+  font-family: "Roboto", sans-serif
 
+`
 export const WrapperSignIn = styled.div`
 width: 100%;
 height: 100%;
@@ -37,7 +40,7 @@ max-width: 368px;
 width: 100%;
 padding: 50px 60px;
 border-radius: 10px;
-border: 0.7px solid ${({theme}) => theme.odalBlockSignInBorder};
+border: 0.7px solid ${({theme}) => theme.modalBlockSignInBGodalBlockSignInBorder};
 box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.13);
 `
 export const ModalTtl = styled.div`
@@ -46,8 +49,10 @@ h2 {
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.3px;
     margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    color: ${({theme}) => theme.modalTtlSighIn};
   }
 `
 export const ModalFormLogin = styled.form`
@@ -68,6 +73,8 @@ border-radius: 8px;
 border: 0.7px solid rgba(148, 166, 190, 0.4);
 outline: none;
 padding: 10px 8px;
+
+background-color: ${({theme}) => theme.modalInputBG};
 
 &::-moz-placeholder {
     font-family: "Roboto", sans-serif;
@@ -112,6 +119,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
 
 `

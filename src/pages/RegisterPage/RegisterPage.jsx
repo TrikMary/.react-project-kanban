@@ -41,7 +41,7 @@ export const RegisterPage = ({ setIsAuth }) => {
             placeholder="Пароль"
           />
           <button className="modal__btn-signup-ent _hover01" id="SignUpEnter">
-            <Link onClick={registerTrue} to={routes.main }>Зарегистрироваться</Link>{" "}
+            <Link onClick={registerTrue} to={routes.login}>Зарегистрироваться</Link>{" "}
           </button>
           <div className="modal__form-group">
             <p>

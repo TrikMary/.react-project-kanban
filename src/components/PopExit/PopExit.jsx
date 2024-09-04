@@ -21,8 +21,8 @@ export const PopExit = ({setIsAuth}) => {
           </S.PopExitTitle>
           <S.PopExitForm id="formExit" action="#">
             <S.PopExitFormGroup>
-              <S.ButtonPopExitYes id="exitYes"  >
-                <Link  onClick={exitAuth} to={routes.login}>Да, выйти</Link>
+              <S.ButtonPopExitYes id="exitYes" onClick={exitAuth} >
+                <Link to={routes.login}>Да, выйти</Link>
               </S.ButtonPopExitYes>
               <S.ButtonPopExitNo id="exitNo">
                 <Link to={routes.main} >Нет, остаться</Link>

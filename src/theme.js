@@ -21,6 +21,8 @@ export const light = {
     wrapperSignInBG: "#EAEEF6",
     modalBlockSignInBG: "#FFFFFF",
     modalBlockSignInBorder: "#D4DBE5",
+    modalTtlSighIn: "#000000",
+    modalInputBG: "#FFFFFF",
 
     
 }
@@ -48,4 +50,6 @@ export const dark = {
     wrapperSignInBG: "#151419",
     modalBlockSignInBG: "#20202C",
     modalBlockSignInBorder: "#4E5566",
-}
+    modalTtlSighIn: "#FFFFFF",
+    modalInputBG: "#20202C",
+}   
