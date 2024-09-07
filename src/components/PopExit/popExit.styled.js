@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Hover01, Hover03 } from "../../globalStyle.styled.js";
 
 export const PopExit = styled.div`
-display: none;
+
 width: 100%;
 height: 100%;
 min-width: 320px;
@@ -21,17 +21,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-background: rgba(0, 0, 0, 0.4);
+background: ${({theme}) => theme.exitBG};
 `
 export const PopExitBlock = styled.div`
 display: block;
 margin: 0 auto;
-background-color: #FFFFFF;
+background-color: ${({theme}) => theme.exitBlockBG};
 max-width: 370px;
 width: 100%;
 padding: 50px 60px;
 border-radius: 10px;
-border: 0.7px solid #D4DBE5;
+border: 0.7px solid ${({theme}) => theme.modalBlockSignInBorder};
 box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.13);
 `
 
@@ -43,6 +43,8 @@ h2 {
     line-height: 30px;
     letter-spacing: -0.4px;
     margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    color: ${({theme}) => theme.modalTtlSighIn};
   }
 `
 
@@ -88,7 +90,7 @@ width: 153px;
 height: 30px;
 background-color: transparent;
 border-radius: 4px;
-border: 0.7px solid var(--palette-navy-60, #565EEF);
+border: 0.7px solid ${({theme}) => theme.exitNo};
 outline: none;
 display: flex;
 align-items: center;
@@ -104,7 +106,7 @@ ${Hover03}
 a {
     width: 100%;
     height: 100%;
-    color: #565EEF;
+    color: ${({theme}) => theme.exitNo};
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import * as S from "./header.styled.js"
 import { Container } from "../../globalStyle.styled.js";
+import { Link } from "react-router-dom";
+import { routes } from "../../router/routes.js";
 
 
 
@@ -71,7 +73,7 @@ export const Header = ({ addCard, changeTheme, setChangeTheme }) => {
                    name="checkbox" />
                 </S.PopUserSetTheme>
                 <S.PopUserButtonExit type="button">
-                  <a href="#popExit">Выйти</a>
+                  <Link to={routes.exit} >Выйти</Link>
                 </S.PopUserButtonExit>
               </S.HeaderPopUserSet>
             )}
