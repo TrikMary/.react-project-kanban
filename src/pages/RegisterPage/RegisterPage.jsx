@@ -4,7 +4,7 @@ import * as S from "./registerPage.styled.js"
 
 
 
-export const RegisterPage = ({ setIsAuth }) => {
+export const RegisterPage = ({ setIsUser }) => {
 // Функция имитирующая регистрацию
   const registerTrue = () => {
     

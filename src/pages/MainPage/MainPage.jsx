@@ -9,7 +9,7 @@ import { Main } from "../../components/Main/Main.jsx";
 import { Outlet } from "react-router-dom";
 import { getTasks } from "../../api/tasks.js";
 
-export const MainPage = ({ changeTheme, setChangeTheme }) => {
+export const MainPage = ({ changeTheme, setChangeTheme, user }) => {
     {
         /* Создаем состояние, которое можем изменять */
       }
@@ -33,7 +33,7 @@ export const MainPage = ({ changeTheme, setChangeTheme }) => {
       {/* Создаем имитацию загрузки и отрисовываем выбор ниже в return */}
       const [isLoading, setIsLoading] = useState(true);
       useEffect(() => {
-        getTasks().then((res) => {
+        getTasks(user.token).then((res) => {
         console.log(res);
         setCards(res.tasks);
         

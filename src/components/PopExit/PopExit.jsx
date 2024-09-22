@@ -3,12 +3,12 @@ import { routes } from "../../router/routes.js";
 import { Link, useNavigate } from "react-router-dom";
 
 
-export const PopExit = ({setIsAuth}) => {
+export const PopExit = ({setIsUser}) => {
 
   // Функция скидывающая состояние авторизации при выходе
   const exitAuth = () => {
     
-    setIsAuth(false)
+    setIsUser(null);
         
   }
   

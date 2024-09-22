@@ -2,10 +2,10 @@ import { PopExit } from "../../components/PopExit/PopExit.jsx"
 
 
 
-export const ExitPage = () => {
+export const ExitPage = ( {setIsUser} ) => {
     return (
        
-      <PopExit />
+      <PopExit setIsUser={setIsUser}/>
        
     )
 }
