@@ -64,7 +64,9 @@ export const MainPage = ({ changeTheme, setChangeTheme, user }) => {
         <p>Error</p>
         ) : (
           <Main cards={cards} />
+          
         )}
+        <Outlet />  
       </Wrapper>
     )
 }
