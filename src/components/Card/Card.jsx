@@ -25,7 +25,7 @@ export const Card = ({title, topic, date, id}) => {
             </S.CardGroup>
             <S.CardContent>
               <a href="" target="_blank">
-                <S.CardTitleH3>{title}</S.CardTitleH3>
+                <S.CardTitleH3>{title}{id}</S.CardTitleH3>
               </a>
               <S.CardDate>
                 <svg

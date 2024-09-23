@@ -23,7 +23,7 @@ export const AppRoutes = ({ changeTheme, setChangeTheme }) => {
                 <Route element={<ProtectedRoute user={user} />}>
                     <Route path={routes.main} element={<MainPage changeTheme={changeTheme} setChangeTheme={setChangeTheme} user={user}/>} />
                     <Route path={routes.exit} element={<ExitPage setIsUser={setIsUser} />} />
-                    <Route path={"card/:id"} element={<PopBrowse />} />
+                    <Route path={"card/:id"} element={<PopBrowse setIsUser={setIsUser}/>} />
                 </Route>
                
                 <Route path={routes.notFound} element={<NotFoundPage />} />
