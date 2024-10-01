@@ -14,21 +14,21 @@ import { PopBrowse } from "../components/PopBrowse/PopBrowse.jsx"
 // Здесь обозначаем существующие страницы и их маршруты
 
 export const AppRoutes = ({ changeTheme, setChangeTheme }) => {
-    const [isAuth, setIsAuth] = useState(false);
+    const [user, setIsUser] = useState(null);
     
     return (
         <BrowserRouter>
         
             <Routes>
-                <Route element={<ProtectedRoute isAuth={isAuth} />}>
-                    <Route path={routes.main} element={<MainPage changeTheme={changeTheme} setChangeTheme={setChangeTheme} />} />
-                    <Route path={routes.exit} element={<ExitPage setIsAuth={setIsAuth} />} />
-                    <Route path={"card/:id"} element={<PopBrowse />} />
+                <Route element={<ProtectedRoute user={user} />}>
+                    <Route path={routes.main} element={<MainPage changeTheme={changeTheme} setChangeTheme={setChangeTheme} user={user}/>} />
+                    <Route path={routes.exit} element={<ExitPage setIsUser={setIsUser} />} />
+                    <Route path={"card/:id"} element={<PopBrowse setIsUser={setIsUser}/>} />
                 </Route>
                
                 <Route path={routes.notFound} element={<NotFoundPage />} />
-                <Route path={routes.login} element={<LoginPage setIsAuth={setIsAuth} />} />
-                <Route path={routes.register} element={<RegisterPage setIsAuth={setIsAuth}/>} />
+                <Route path={routes.login} element={<LoginPage setIsUser={setIsUser} />} />
+                <Route path={routes.register} element={<RegisterPage setIsUser={setIsUser}/>} />
                 
             </Routes>
         </BrowserRouter>

@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
-import { cardList } from "../../data";
+// import { cardList } from "../../data";
 import { Wrapper } from "../../globalStyle.styled.js";
-import { PopExit } from "../../components/PopExit/PopExit.jsx";
+// import { PopExit } from "../../components/PopExit/PopExit.jsx";
 import { PopNewCard } from "../../components/PopNewCard/PopNewCard";
-import { PopBrowse } from "../../components/PopBrowse/PopBrowse.jsx";
+// import { PopBrowse } from "../../components/PopBrowse/PopBrowse.jsx";
 import { Header } from "../../components/Header/Header.jsx";
 import { Main } from "../../components/Main/Main.jsx";
 import { Outlet } from "react-router-dom";
+import { getTasks } from "../../api/tasks.js";
 
-export const MainPage = ({ changeTheme, setChangeTheme }) => {
+export const MainPage = ({ changeTheme, setChangeTheme, user }) => {
     {
         /* Создаем состояние, которое можем изменять */
       }
-      const [cards, setCards] = useState(cardList);
+      const [cards, setCards] = useState([]);
+      const [error, setError] = useState("");
       {
         /* Создаем функцию по добавлению новой задачи, вместо id берем длинну cards из состояния */
       }
@@ -29,12 +31,24 @@ export const MainPage = ({ changeTheme, setChangeTheme }) => {
         setCards([...cards, newCard])
       };
       {/* Создаем имитацию загрузки и отрисовываем выбор ниже в return */}
-      const [isLoading, setIsLoading] = useState(false);
+      const [isLoading, setIsLoading] = useState(true);
       useEffect(() => {
-        setIsLoading(true);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 1000);
+        getTasks(user.token).then((res) => {
+        console.log(res);
+        setCards(res.tasks);
+        
+      })
+      .catch ((error) => {
+        console.log(error.message);
+        setError(error.message);
+      })
+      .finally (() => {
+        setIsLoading(false);
+      })
+        // setIsLoading(true);
+        // setTimeout(() => {
+        //   setIsLoading(false);
+        // }, 1000);
       }, []);
     return (
         
@@ -46,9 +60,13 @@ export const MainPage = ({ changeTheme, setChangeTheme }) => {
         <Header addCard={addCard} setChangeTheme={setChangeTheme} changeTheme={changeTheme}/>
         {isLoading ? (
           <p className="loader">Данные загружаются</p>
+        ) : error ? (
+        <p>Error</p>
         ) : (
           <Main cards={cards} />
+          
         )}
+        <Outlet />  
       </Wrapper>
     )
 }
